@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Game Of Life</title>
+<script src="GameOfLife.js"></script>
+</head>
+<body>
+<canvas id="background" width="900" height="450"></canvas>
+<div class="box">
+        <p class="info"><abbr title="Current Generation">Generation</abbr>: <span id="generation"></span> | <abbr title="Number of live cells">Live cells</abbr>: <span id="livecells"></span> |<abbr title="Number of infected cells">Infected cells</abbr>: <span id="infectedcells"></span> </p>
+      </div>
+      <div class="box controls">
+        <form action="">
+        	<div>Grid width (in cells)<input size="4" maxlength="3" type="text" value = "100" id = "width">
+        		 Grid Height (in cells)<input size="4" maxlength="3" type="text" value = "100" id = "height"></div>
+        	<div>Probability of alive cells (in %)
+        	<input size="4" maxlength="2" type="text" value = "100" id = "probAlive"></div>
+        	<div>Probability of infected cells (in %).
+        	<input size="4" maxlength="2" type="text" value = "50" id = "probInfected"></div>
+        	<div># of step to insert infected cells
+        	<input size="4" maxlength="4" type="text" value = "15" id = "stepInfected"></div>
+        	<input type="button" value="Generate Grid" id="buttonGenerate" onclick="generate()"/>
+        	<input type="button" value="Start" id="buttonRun" onclick = "run()"/>
+        	<input type="button" value="Step" id="buttonStep" onclick = "stepNext()"/>
+        	<input type="button" value="Clear" id="buttonClear" onclick = "clearGrid()"/>
+        	<input type="button" value="Stop" id="buttonStop" onclick= "stop()"/>
+        </form>
+      </div>
+</body>
+</html>
